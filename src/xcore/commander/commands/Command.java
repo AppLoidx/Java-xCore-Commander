@@ -6,7 +6,7 @@ package xcore.commander.commands;
  * Field {@link #name} identification command,he is called by this name
  *
  * @author Arthur Kupriyanov
- * @version 1.1
+ * @version 1.2
  */
 public abstract class Command {
     protected String commandName;

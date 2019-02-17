@@ -7,9 +7,8 @@ import xcore.commander.commands.Unknown;
 import java.util.ArrayList;
 
 /**
- * Используется для распределения команд
- *
- * Понадобится при создании нескольких уровней доступа
+ * @author Arthur Kupriyanov
+ * @version 1.0.0
  */
 public class CommandManager {
     private static ArrayList<Command> commands = new ArrayList<>();
