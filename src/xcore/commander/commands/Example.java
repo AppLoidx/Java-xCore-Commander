@@ -8,6 +8,7 @@ public class Example extends Command {
 
     @Override
     public String exec(String input) {
+
         // set realization of this command here...
         return "This is example command!";
     }
