@@ -5,9 +5,9 @@ import java.util.Map;
 import java.util.TreeMap;
 
 /**
- * Класс для работы с чтением ключа при вводе команды
+ * Class for work with keys on command input
  *
- * @author Артур Куприянов
+ * @author Arthur Kupriyanov
  * @version 1.1
  */
 public class KeysReader {
@@ -20,7 +20,6 @@ public class KeysReader {
     public static Map<String, String> readKeys(String[] words){
         Map<String, String> keyMap = new HashMap<>();
 
-        // резервируем ключ для его значения
         String reservedKey = null;
 
         StringBuilder value = new StringBuilder();
@@ -85,7 +84,6 @@ public class KeysReader {
     public static TreeMap<Integer, Map<String, String>> readOrderedKeys(String[] words){
         TreeMap<Integer, Map<String, String>> response = new TreeMap<>();
 
-        // резервируем ключ для его значения
         String reservedKey = null;
 
         int counter = 0;
@@ -94,7 +92,9 @@ public class KeysReader {
         ) {
 
             if (word.matches("-[a-z]") || word.matches("--[a-z]*")) {
-                // Если ключ пустой
+
+                // If key is empty
+
                 if (reservedKey != null){
                     Map<String, String> keyMap = new HashMap<>();
                     keyMap.put(reservedKey, "");

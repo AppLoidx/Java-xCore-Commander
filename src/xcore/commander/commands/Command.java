@@ -57,10 +57,8 @@ public abstract class Command {
 
 
     /**
-     * Объекты эквивалентны только, если поля <code>{@link #name}</code> равны
-     * имеют одинаковое значение и объект является классом-наследником {@link Command}
-     * @param obj сравниваемый объект
-     * @return {@code true} если объекты эквивалентны; {@code false} если объекты различаются
+     * Objects equivalents if fields <code>{@link #name}</code> equals
+     * and object extends {@link Command}
      */
     @Override
     public boolean equals(Object obj) {
