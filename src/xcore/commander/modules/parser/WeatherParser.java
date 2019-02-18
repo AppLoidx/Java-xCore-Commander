@@ -8,10 +8,12 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 /**
- * Парсер погоды
+ * Weather parser<br>
+ * Needs network connection
  *
  * @version 1.0.0
  * @author Arthur Kupriyanov
+ * @see org.jsoup.Jsoup
  */
 public class WeatherParser {
     private String city = "saint_petersburg";
@@ -43,11 +45,4 @@ public class WeatherParser {
         return new ArrayList<>(elements.eachText());
     }
 
-    public static void main(String ... args){
-        try {
-            System.out.println(new WeatherParser().getDaysTemperature());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 }
