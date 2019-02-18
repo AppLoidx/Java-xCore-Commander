@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 /**
  * @author Arthur Kupriyanov
- * @version 1.0.0
+ * @version 1.0.1
  */
 public class CommandManager {
     private static ArrayList<Command> commands = new ArrayList<>();
@@ -18,7 +18,7 @@ public class CommandManager {
     }
 
     public static void addCommand(Command command){ commands.add(command);}
-    public static ArrayList<Command> getCommands(){
+    static ArrayList<Command> getCommands(){
         return commands;
     }
 }
