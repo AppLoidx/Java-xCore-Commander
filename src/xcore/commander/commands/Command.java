@@ -30,10 +30,10 @@ public abstract class Command {
     protected abstract void setName();
 
     /**
-     * Возвращает строку в формате:<br>
-     * name: имяКоманды<br>
+     * Returns string as format:<br>
+     * "name": command_name<br>
      *
-     * @return форматированное имя и мод команды
+     * @return "name" : <code>command_name({@link #name})</code>
      */
     @Override
     public String toString() {
@@ -44,7 +44,7 @@ public abstract class Command {
     /**
      * Берет хэш-код значащего поля {@link #name}
      *
-     * @return хэш-код команды
+     * @return hashCode of significant field
      */
     @Override
     public int hashCode() {

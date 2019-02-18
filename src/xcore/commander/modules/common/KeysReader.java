@@ -12,10 +12,10 @@ import java.util.TreeMap;
  */
 public class KeysReader {
     /**
-     * Карта ключей с их значениями, если значение ключа не было указано, то значение - пустое
+     * Map with theirs values, if key value not stated, value - empty ("")
      * version: 1.2
-     * @param words массив ключей и их значений, ключи должны начинаться с "-" или "--"
-     * @return карту вида ключ - значение
+     * @param words array of keys and values, keys must start with "-" or "--"
+     * @return map as format key=value
      */
     public static Map<String, String> readKeys(String[] words){
         Map<String, String> keyMap = new HashMap<>();
@@ -55,12 +55,6 @@ public class KeysReader {
                 else firstWord = false;
 
                 value.append(word);
-
-                //value.append(word);
-
-                //keyMap.put(reservedKey, value.toString());//word);
-                //value = new StringBuilder();
-                //reservedKey = null;
             }
 
             if (word.matches("-[a-z]*")){
@@ -83,10 +77,10 @@ public class KeysReader {
     }
 
     /**
-     * Сортированная карта ключей и их значений
+     * Ordered keys of values map
      * version: 1.0
-     * @param words массив ключей и их значений, ключи должны начинаться с "-" или "--"
-     * @return крату вида [index, [ключ, значение]]
+     * @param words array of keys and values, keys must start with "-" or "--"
+     * @return map as format [index, [key, value]]
      */
     public static TreeMap<Integer, Map<String, String>> readOrderedKeys(String[] words){
         TreeMap<Integer, Map<String, String>> response = new TreeMap<>();
