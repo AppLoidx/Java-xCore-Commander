@@ -3,6 +3,7 @@ package xcore.commander;
 
 import xcore.commander.commands.Command;
 import xcore.commander.commands.Unknown;
+import xcore.commander.commands.Weather;
 
 import java.util.ArrayList;
 
@@ -15,6 +16,10 @@ public class CommandManager {
 
     static {
         commands.add(new Unknown());
+
+        // Example commands --!>
+
+        commands.add(new Weather());
     }
 
     public static void addCommand(Command command){ commands.add(command);}
