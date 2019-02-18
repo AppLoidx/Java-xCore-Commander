@@ -49,7 +49,7 @@ public abstract class Command {
     @Override
     public int hashCode() {
         if (this.name == null){
-            throw new CommandHasNoNameException("Команда не имеет имени!");
+            throw new CommandHasNoNameException("Command has no name");
         }
 
         return this.name.hashCode();
