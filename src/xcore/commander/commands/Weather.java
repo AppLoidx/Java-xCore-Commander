@@ -32,6 +32,7 @@ public class Weather extends Command{
     protected void setName() {
 
         // setting command name
+
         commandName = "weather";
     }
 }
