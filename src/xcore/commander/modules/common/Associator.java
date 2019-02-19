@@ -25,14 +25,14 @@ public class Associator <K,V>{
             }
             HashSet<K> newKey = oldKey;
             Objects.requireNonNull(newKey).addAll(hashSetKey);
-            removeAsscociation(oldKey);
+            removeAssociation(oldKey);
             this.putAssociation(newKey, value);
         }
         associations.put(hashSetKey, value);
         values.add(value);
     }
 
-    private void removeAsscociation(HashSet<K> key){
+    private void removeAssociation(HashSet<K> key){
         values.remove(associations.get(key));
         associations.remove(key);
     }
