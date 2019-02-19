@@ -4,14 +4,13 @@ import com.sun.istack.internal.NotNull;
 
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.Objects;
 
 /**
  * @author Arthur Kupriyanov
  */
-public class Associator <K,V>{
-    public HashMap<HashSet<K>,V> associations = new HashMap<>();
+public class Associator<K,V>{
+    private HashMap<HashSet<K>,V> associations = new HashMap<>();
     private HashSet<V> values = new HashSet<>();
 
     public void putAssociation(@NotNull HashSet<K> hashSetKey, V value){
