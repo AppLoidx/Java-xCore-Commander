@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="xcc-1.0.0:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/xcc_1_0_0_jar</output-path>
+    <root id="archive" name="xCore-Commander.jar">
+      <element id="module-output" name="xCore-Commander" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/xcore/commander/modules/parser/jsoup-1.11.3.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
