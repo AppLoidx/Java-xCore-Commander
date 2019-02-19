@@ -1,5 +1,8 @@
 package consoletest;
 
+
+import examples.commands.Browser;
+import examples.commands.Start;
 import xcore.commander.Commander;
 
 import java.util.Scanner;
@@ -16,7 +19,8 @@ public class Console {
 
         // --------- adding commands ------------
         Commander.addCommand(new MyCommandExample());   // custom command
-
+        Commander.addCommand(new Start());
+        Commander.addCommand(new Browser());
         // ADD YOUR COMMANDS LIKE HERE...
         // --------------------------------------
 
