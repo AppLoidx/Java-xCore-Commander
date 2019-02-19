@@ -39,9 +39,8 @@ public class Associator <K,V>{
 
     public V getAssociation(K association) throws AssociationNotFoundException {
         for(HashSet<K> k: associations.keySet() ){
-            Iterator<K> innerSetValue = k.iterator();
-            while(innerSetValue.hasNext()) {
-                if (innerSetValue.next().equals(association)) {
+            for (K k1 : k) {
+                if (k1.equals(association)) {
                     return this.associations.get(k);
                 }
             }
@@ -50,14 +49,16 @@ public class Associator <K,V>{
         throw new AssociationNotFoundException("Ассоциация не найдена!");
     }
 
-    public V tryGetAssociation(V association){
+    public String tryGetAssociation(K association){
         for(HashSet<K> k: associations.keySet() ){
-            if (k.equals(association)){
-                return this.associations.get(k);
+            for (K k1 : k) {
+                if (k1.equals(association)) {
+                    return this.associations.get(k).toString();
+                }
             }
         }
 
-        return association;
+        return association.toString();
     }
 
 
