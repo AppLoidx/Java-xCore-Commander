@@ -1,4 +1,3 @@
-# LICENSE
 
 Copyright 2019 Arthur Kupriyanov
 
